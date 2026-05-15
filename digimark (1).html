@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DiGiMark – Best Digital Marketing Course on the Globe. AI-powered training, live projects, internship, and 100% placement assistance. Learn SEO, Google Ads, Social Media Marketing, and Generative AI tools.">
+<title>DiGiMark – Best Digital Marketing Course on the Globe | AI-Powered Training Institute</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0047FF;
+    --primary-dark: #0033CC;
+    --accent: #FF3D00;
+    --accent2: #00D4AA;
+    --dark: #080C1A;
+    --dark2: #0D1428;
+    --card: #111827;
+    --card2: #151E30;
+    --text: #E8EDF8;
+    --muted: #8A9BBF;
+    --border: rgba(255,255,255,0.08);
+    --gold: #FFB300;
+    --grad: linear-gradient(135deg, #0047FF 0%, #00D4AA 100%);
+    --grad2: linear-gradient(135deg, #FF3D00 0%, #FFB300 100%);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 68px;
+    background: rgba(8,12,26,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.55rem; font-weight: 800;
+    background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--accent); -webkit-text-fill-color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+    transition: color .2s; letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: var(--primary); color: #fff; border: none;
+    padding: 0.5rem 1.4rem; border-radius: 6px; font-size: 0.9rem;
+    font-weight: 600; cursor: pointer; transition: background .2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .nav-cta:hover { background: var(--primary-dark); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+
+  /* ─── HERO ─── */
+  #home {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 100px 5% 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,71,255,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 50% at 10% 80%, rgba(0,212,170,0.1) 0%, transparent 60%);
+  }
+  .globe-ring {
+    position: absolute; right: -5%; top: 50%; transform: translateY(-50%);
+    width: 520px; height: 520px; border-radius: 50%;
+    border: 1.5px solid rgba(0,71,255,0.3);
+    animation: spin 40s linear infinite;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .globe-ring::before {
+    content: ''; position: absolute; inset: 30px; border-radius: 50%;
+    border: 1px solid rgba(0,212,170,0.2);
+    animation: spin 25s linear infinite reverse;
+  }
+  .globe-ring::after {
+    content: '🌐'; font-size: 9rem; line-height: 1;
+    filter: drop-shadow(0 0 40px rgba(0,71,255,0.5));
+    animation: none;
+  }
+  @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+  .globe-ring::after { animation: counter-spin 40s linear infinite; }
+  @keyframes counter-spin {
+    to { transform: rotate(-360deg); }
+  }
+  .hero-content { position: relative; max-width: 640px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,71,255,0.12); border: 1px solid rgba(0,71,255,0.3);
+    padding: 6px 16px; border-radius: 100px; font-size: 0.8rem;
+    color: #7AA8FF; font-weight: 500; margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: '●'; color: #00D4AA; font-size: 0.6rem; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -1px; margin-bottom: 1.2rem;
+  }
+  h1 .highlight {
+    background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-sub { font-size: 1.05rem; color: var(--muted); max-width: 520px; margin-bottom: 2rem; font-weight: 300; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .btn-primary {
+    background: var(--primary); color: #fff;
+    padding: 0.85rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 0 30px rgba(0,71,255,0.35);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 40px rgba(0,71,255,0.5); }
+  .btn-outline {
+    background: transparent; color: var(--text);
+    padding: 0.85rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    border: 1.5px solid var(--border); cursor: pointer; text-decoration: none;
+    transition: border-color .2s, color .2s; display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+  .hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+  .stat { }
+  .stat-num {
+    font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+    background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); font-weight: 400; }
+
+  /* ─── BATCH BANNER ─── */
+  .batch-banner {
+    background: linear-gradient(135deg, rgba(0,71,255,0.15), rgba(0,212,170,0.1));
+    border: 1px solid rgba(0,71,255,0.25);
+    border-radius: 12px; margin: 0 5%; padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+  }
+  .batch-text h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: #fff; }
+  .batch-text p { font-size: 0.88rem; color: var(--accent2); margin-top: 4px; }
+  .countdown { display: flex; gap: 1rem; }
+  .count-unit { text-align: center; }
+  .count-num {
+    font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+    background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    min-width: 60px; display: block;
+  }
+  .count-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* ─── TICKER ─── */
+  .ticker-wrap {
+    overflow: hidden; background: rgba(0,71,255,0.06);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 12px 0; margin: 2rem 0;
+  }
+  .ticker {
+    display: flex; width: max-content;
+    animation: ticker 35s linear infinite;
+  }
+  .ticker:hover { animation-play-state: paused; }
+  @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .ticker-item { white-space: nowrap; padding: 0 2rem; font-size: 0.88rem; color: var(--muted); }
+  .ticker-item strong { color: var(--accent2); }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 80px 5%; }
+  .section-tag {
+    display: inline-block; background: rgba(0,71,255,0.12); border: 1px solid rgba(0,71,255,0.25);
+    color: #7AA8FF; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 1rem;
+  }
+  .section-sub { color: var(--muted); max-width: 600px; font-size: 1rem; margin-bottom: 3rem; }
+  .text-center { text-align: center; }
+  .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+  /* ─── TOOLS GRID ─── */
+  .tools-grid {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+  }
+  .tool-chip {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 20px; font-size: 0.88rem; font-weight: 500;
+    color: var(--muted); display: flex; align-items: center; gap: 8px;
+    transition: border-color .2s, color .2s, transform .2s;
+  }
+  .tool-chip:hover { border-color: var(--primary); color: var(--text); transform: translateY(-2px); }
+  .tool-chip .icon { font-size: 1.2rem; }
+
+  /* ─── CARDS GRID ─── */
+  .cards-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .cards-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 1.8rem; transition: border-color .2s, transform .2s;
+  }
+  .card:hover { border-color: rgba(0,71,255,0.4); transform: translateY(-3px); }
+  .card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .card p { font-size: 0.9rem; color: var(--muted); }
+
+  /* ─── INTERNSHIP ─── */
+  .internship-hero {
+    background: linear-gradient(135deg, var(--card), var(--card2));
+    border: 1px solid var(--border); border-radius: 20px;
+    padding: 3rem; display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;
+  }
+  .internship-count {
+    font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800;
+    background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .internship-label { color: var(--muted); font-size: 0.9rem; }
+
+  /* ─── SYLLABUS ─── */
+  .syllabus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .syl-item {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.2rem;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.9rem; font-weight: 500;
+    transition: border-color .2s;
+  }
+  .syl-item:hover { border-color: var(--accent2); }
+  .syl-num {
+    font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800;
+    color: var(--primary); min-width: 28px;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .price-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;
+    transition: transform .2s, border-color .2s;
+  }
+  .price-card:hover { transform: translateY(-4px); }
+  .price-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(160deg, rgba(0,71,255,0.1), var(--card));
+  }
+  .price-badge {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: var(--grad2); color: #fff;
+    font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 100px;
+  }
+  .price-name { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--muted); margin-bottom: 0.5rem; }
+  .price-amt {
+    font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; margin-bottom: 0.3rem;
+  }
+  .price-orig { color: var(--muted); font-size: 0.9rem; text-decoration: line-through; margin-bottom: 1.2rem; }
+  .price-list { list-style: none; margin-bottom: 1.5rem; }
+  .price-list li { font-size: 0.88rem; color: var(--muted); padding: 5px 0; border-bottom: 1px solid var(--border); display: flex; gap: 8px; }
+  .price-list li::before { content: '✓'; color: var(--accent2); font-weight: 700; flex-shrink: 0; }
+  .btn-enroll {
+    width: 100%; padding: 0.8rem; border-radius: 8px; border: none; cursor: pointer;
+    font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700;
+    background: var(--primary); color: #fff;
+    transition: background .2s, transform .15s;
+  }
+  .btn-enroll:hover { background: var(--primary-dark); transform: translateY(-1px); }
+  .price-card.featured .btn-enroll { background: var(--grad); }
+
+  /* ─── WHY US ─── */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+  .why-card {
+    background: var(--card2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem; text-align: center;
+    transition: border-color .2s, transform .2s;
+  }
+  .why-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+  .why-icon { font-size: 2.2rem; margin-bottom: 0.8rem; }
+  .why-card h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .why-card p { font-size: 0.82rem; color: var(--muted); }
+
+  /* ─── PLACEMENTS ─── */
+  .placement-bar {
+    display: flex; align-items: center; justify-content: center; gap: 3rem;
+    background: linear-gradient(135deg, rgba(0,71,255,0.1), rgba(0,212,170,0.08));
+    border: 1px solid var(--border); border-radius: 14px; padding: 2rem; flex-wrap: wrap;
+  }
+  .place-stat { text-align: center; }
+  .place-num {
+    font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+    background: var(--grad2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .place-label { font-size: 0.8rem; color: var(--muted); }
+
+  /* ─── VERIFY ─── */
+  #verify { background: var(--dark2); }
+  .verify-box {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 2.5rem; max-width: 540px; margin: 0 auto;
+  }
+  .verify-input {
+    width: 100%; background: var(--dark); border: 1.5px solid var(--border);
+    border-radius: 8px; padding: 0.85rem 1rem; color: var(--text); font-size: 0.95rem;
+    font-family: 'DM Sans', sans-serif; margin-bottom: 1rem;
+    transition: border-color .2s;
+  }
+  .verify-input:focus { outline: none; border-color: var(--primary); }
+  .verify-input::placeholder { color: var(--muted); }
+  .btn-verify {
+    width: 100%; padding: 0.9rem; border-radius: 8px; border: none;
+    background: var(--grad); color: #fff; font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity .2s;
+  }
+  .btn-verify:hover { opacity: 0.9; }
+  .verify-result {
+    margin-top: 1.5rem; padding: 1.5rem; border-radius: 10px;
+    background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.25);
+    display: none;
+  }
+  .verify-result.show { display: block; }
+  .verify-result h4 { color: var(--accent2); font-family: 'Syne', sans-serif; margin-bottom: 0.8rem; }
+  .verify-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
+  .verify-row:last-child { border-bottom: none; }
+  .verify-label { color: var(--muted); }
+  .verify-val { font-weight: 600; color: var(--text); }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--dark2); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; }
+  .contact-info p { color: var(--muted); margin-bottom: 1.5rem; }
+  .contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 1.2rem; }
+  .contact-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+  .contact-detail h4 { font-weight: 600; font-size: 0.9rem; }
+  .contact-detail p { color: var(--muted); font-size: 0.88rem; }
+  .contact-form { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .form-control {
+    width: 100%; background: var(--dark); border: 1.5px solid var(--border);
+    border-radius: 8px; padding: 0.8rem 1rem; color: var(--text); font-size: 0.92rem;
+    font-family: 'DM Sans', sans-serif; transition: border-color .2s;
+  }
+  .form-control:focus { outline: none; border-color: var(--primary); }
+  .form-control::placeholder { color: var(--muted); }
+  select.form-control option { background: var(--dark2); }
+  .btn-submit {
+    width: 100%; padding: 0.9rem; border-radius: 8px; border: none;
+    background: var(--primary); color: #fff; font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700; cursor: pointer; transition: background .2s;
+  }
+  .btn-submit:hover { background: var(--primary-dark); }
+  .wa-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: #25D366; color: #fff; padding: 0.9rem 2rem; border-radius: 8px;
+    font-weight: 700; text-decoration: none; font-size: 1rem; margin-top: 1rem;
+    transition: opacity .2s;
+  }
+  .wa-btn:hover { opacity: 0.9; }
+
+  /* ─── SERVICES ─── */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; }
+  .service-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.6rem; transition: border-color .2s, transform .2s;
+  }
+  .service-card:hover { border-color: var(--primary); transform: translateY(-3px); }
+  .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .service-card h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .service-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.8rem; }
+  .service-card ul { list-style: none; }
+  .service-card ul li { font-size: 0.82rem; color: var(--muted); padding: 3px 0; display: flex; gap: 6px; }
+  .service-card ul li::before { content: '›'; color: var(--primary); font-weight: 700; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: #050810; border-top: 1px solid var(--border);
+    padding: 3rem 5% 1.5rem;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2rem; }
+  .footer-brand p { color: var(--muted); font-size: 0.88rem; margin-top: 0.8rem; max-width: 300px; }
+  .footer-col h5 { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .footer-col a { display: block; color: var(--muted); text-decoration: none; font-size: 0.88rem; margin-bottom: 6px; transition: color .2s; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { font-size: 0.82rem; color: var(--muted); }
+
+  /* ─── WA FLOAT ─── */
+  .wa-float {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 888;
+    width: 56px; height: 56px; border-radius: 50%; background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+    text-decoration: none; transition: transform .2s;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+
+  /* ─── DIVIDER ─── */
+  .divider { width: 60px; height: 3px; background: var(--grad); border-radius: 2px; margin: 1rem 0 2rem; }
+  .divider.center { margin-left: auto; margin-right: auto; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .globe-ring { width: 280px; height: 280px; right: -10%; top: 20%; }
+    .globe-ring::after { font-size: 5rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .countdown { gap: 0.5rem; }
+    .count-num { font-size: 1.5rem; min-width: 44px; }
+    .hero-stats { gap: 1.5rem; }
+    .batch-banner { flex-direction: column; }
+  }
+  @media (max-width: 480px) {
+    .globe-ring { display: none; }
+    h1 { font-size: 2rem; }
+  }
+
+  /* ─── FADE IN ─── */
+  .fade-up {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── MOBILE MENU ─── */
+  .mobile-menu {
+    display: none; position: fixed; top: 68px; left: 0; right: 0;
+    background: rgba(8,12,26,0.97); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 1.5rem 5%;
+    z-index: 998; flex-direction: column; gap: 1.2rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 1rem; font-weight: 500; }
+  .mobile-menu a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">DiGi<span>Mark</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#verify">Verify Certificate</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#training" onclick="toggleMenu()">Training</a>
+  <a href="#verify" onclick="toggleMenu()">Verify Certificate</a>
+  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+  <a href="#contact" onclick="toggleMenu()" style="color:var(--primary);font-weight:700;">🚀 Enroll Now</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="globe-ring"></div>
+  <div class="hero-content fade-up">
+    <div class="hero-badge">🌐 Digital Marketing Institute — On The Globe</div>
+    <h1>
+      Master Digital Marketing<br>
+      <span class="highlight">On The Globe 🌍</span>
+    </h1>
+    <p class="hero-sub">DiGiMark offers world-class AI-powered digital marketing training with live projects, guaranteed internships, and 100% placement support — wherever you are on the planet.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">🚀 Enroll Now</a>
+      <a href="#training" class="btn-outline">📖 View Courses</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Students Placed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Course Modules</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.9★</div>
+        <div class="stat-label">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Job Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BATCH BANNER -->
+<div class="batch-banner fade-up">
+  <div class="batch-text">
+    <h3>🚀 NEW BATCH STARTING SOON — 50% OFF Early Enrollment</h3>
+    <p>Limited seats · 3 Days Free Trial Class · Internship + Placement Guaranteed</p>
+  </div>
+  <div class="countdown">
+    <div class="count-unit"><span class="count-num" id="cd-days">00</span><span class="count-label">Days</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-hrs">00</span><span class="count-label">Hours</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-min">00</span><span class="count-label">Mins</span></div>
+    <div class="count-unit"><span class="count-num" id="cd-sec">00</span><span class="count-label">Secs</span></div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="ticker-item">★★★★★ <strong>"Best institute globally!"</strong> – Ravi K.</span>
+    <span class="ticker-item">💼 <strong>"Got placed at 4.5 LPA"</strong> – Priya S.</span>
+    <span class="ticker-item">🎓 <strong>"AI tools training was amazing"</strong> – Kumar R.</span>
+    <span class="ticker-item">⭐ <strong>4.9/5 Rating on Google</strong></span>
+    <span class="ticker-item">🏆 <strong>"500+ Successful Placements"</strong></span>
+    <span class="ticker-item">📈 <strong>"From 0 to 3.5 LPA in 3 months"</strong> – Anil K.</span>
+    <span class="ticker-item">🚀 <strong>"Switched career successfully"</strong> – Swathi M.</span>
+    <span class="ticker-item">💻 <strong>"Best place to learn digital skills"</strong> – Harika R.</span>
+    <span class="ticker-item">★★★★★ <strong>"Best institute globally!"</strong> – Ravi K.</span>
+    <span class="ticker-item">💼 <strong>"Got placed at 4.5 LPA"</strong> – Priya S.</span>
+    <span class="ticker-item">🎓 <strong>"AI tools training was amazing"</strong> – Kumar R.</span>
+    <span class="ticker-item">⭐ <strong>4.9/5 Rating on Google</strong></span>
+    <span class="ticker-item">🏆 <strong>"500+ Successful Placements"</strong></span>
+    <span class="ticker-item">📈 <strong>"From 0 to 3.5 LPA in 3 months"</strong> – Anil K.</span>
+    <span class="ticker-item">🚀 <strong>"Switched career successfully"</strong> – Swathi M.</span>
+    <span class="ticker-item">💻 <strong>"Best place to learn digital skills"</strong> – Harika R.</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section>
+  <div class="fade-up">
+    <div class="section-tag">About DiGiMark</div>
+    <div class="section-title">Premier Digital Marketing Institute<br>On The Globe 🌐</div>
+    <div class="divider"></div>
+    <div class="cards-2">
+      <div>
+        <p style="color:var(--muted);margin-bottom:1.2rem;">DiGiMark is a world-class digital marketing training institute offering comprehensive courses designed for students, professionals, and business owners globally. Our institute specializes in providing industry-relevant digital marketing education with a focus on practical skills, AI-powered tools, and real-world projects.</p>
+        <p style="color:var(--muted);">Our curriculum is constantly updated to reflect the latest trends in digital marketing, making DiGiMark the top choice for digital marketing education across the globe — whether you're a student looking to start your career, a professional seeking to upskill, or a business owner wanting to enhance your digital presence.</p>
+      </div>
+      <div class="cards-3" style="gap:1rem;">
+        <div class="why-card fade-up">
+          <div class="why-icon">🤖</div>
+          <h4>AI-Powered Training</h4>
+          <p>Master cutting-edge AI tools for marketing automation and analytics</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon">🌍</div>
+          <h4>Global Reach</h4>
+          <p>Learn strategies that work for audiences worldwide</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon">💯</div>
+          <h4>100% Job Support</h4>
+          <p>Guaranteed placement assistance until you land your dream role</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="why-icon">📊</div>
+          <h4>Live Projects</h4>
+          <p>Work on real client campaigns from day one</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section style="background:var(--dark2);">
+  <div class="fade-up text-center">
+    <div class="section-tag">What We Teach</div>
+    <div class="section-title">Industry Tools & Platforms</div>
+    <div class="divider center"></div>
+    <div class="tools-grid">
+      <div class="tool-chip"><span class="icon">🔍</span> Google Analytics</div>
+      <div class="tool-chip"><span class="icon">📢</span> Google Ads</div>
+      <div class="tool-chip"><span class="icon">📘</span> Meta Ads Manager</div>
+      <div class="tool-chip"><span class="icon">📸</span> Instagram Marketing</div>
+      <div class="tool-chip"><span class="icon">💼</span> LinkedIn Ads</div>
+      <div class="tool-chip"><span class="icon">🎵</span> TikTok Ads</div>
+      <div class="tool-chip"><span class="icon">📧</span> Mailchimp</div>
+      <div class="tool-chip"><span class="icon">🤖</span> ChatGPT / Claude AI</div>
+      <div class="tool-chip"><span class="icon">🎨</span> Canva Pro</div>
+      <div class="tool-chip"><span class="icon">📈</span> SEMrush</div>
+      <div class="tool-chip"><span class="icon">🔗</span> Ahrefs</div>
+      <div class="tool-chip"><span class="icon">🎬</span> Capcut / Premiere</div>
+      <div class="tool-chip"><span class="icon">🛒</span> Shopify</div>
+      <div class="tool-chip"><span class="icon">💬</span> HubSpot CRM</div>
+      <div class="tool-chip"><span class="icon">🌐</span> WordPress</div>
+      <div class="tool-chip"><span class="icon">📊</span> Power BI</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING / COURSES -->
+<section id="training">
+  <div class="fade-up">
+    <div class="section-tag">Courses</div>
+    <div class="section-title">Comprehensive Digital Marketing<br>Courses — Globally Designed</div>
+    <div class="divider"></div>
+    <p class="section-sub">At DiGiMark, we offer programs designed to take you from zero to job-ready, covering 15+ modules with live projects and AI tools training.</p>
+  </div>
+
+  <!-- INTERNSHIP -->
+  <div class="internship-hero fade-up">
+    <div>
+      <div class="internship-count">24+</div>
+      <div class="internship-label">Students Currently in Live Internship Program</div>
+    </div>
+    <div class="cards-3" style="flex:1;gap:1rem;">
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Live Projects</h3>
+        <p>Real client campaigns with hands-on experience in actual marketing scenarios worldwide.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>Certification</h3>
+        <p>Industry-recognized certificate with global validity, adding real value to your resume.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💼</div>
+        <h3>Placement Support</h3>
+        <p>Guaranteed interviews and job referrals upon successful internship completion.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYLLABUS -->
+  <div style="margin-top:3rem;" class="fade-up">
+    <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.5rem;">📚 Complete Syllabus 2026</h3>
+    <div class="syllabus-grid">
+      <div class="syl-item"><span class="syl-num">01</span>Digital Marketing Fundamentals</div>
+      <div class="syl-item"><span class="syl-num">02</span>Website Development Basics</div>
+      <div class="syl-item"><span class="syl-num">03</span>SEO – On Page & Off Page</div>
+      <div class="syl-item"><span class="syl-num">04</span>Google Search Ads (PPC)</div>
+      <div class="syl-item"><span class="syl-num">05</span>Google Display & YouTube Ads</div>
+      <div class="syl-item"><span class="syl-num">06</span>Social Media Marketing (SMM)</div>
+      <div class="syl-item"><span class="syl-num">07</span>Meta Ads — Facebook & Instagram</div>
+      <div class="syl-item"><span class="syl-num">08</span>Content Marketing & Copywriting</div>
+      <div class="syl-item"><span class="syl-num">09</span>Email Marketing & Automation</div>
+      <div class="syl-item"><span class="syl-num">10</span>Analytics & Data Reporting</div>
+      <div class="syl-item"><span class="syl-num">11</span>Influencer & Affiliate Marketing</div>
+      <div class="syl-item"><span class="syl-num">12</span>E-Commerce Marketing (Shopify)</div>
+      <div class="syl-item"><span class="syl-num">13</span>Generative AI for Marketing</div>
+      <div class="syl-item"><span class="syl-num">14</span>Video Marketing & Reels Strategy</div>
+      <div class="syl-item"><span class="syl-num">15</span>Freelancing & Agency Setup</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section style="background:var(--dark2);">
+  <div class="fade-up text-center">
+    <div class="section-tag">Pricing</div>
+    <div class="section-title">Course Fees — 50% OFF Limited Time</div>
+    <div class="divider center"></div>
+    <div style="background:rgba(255,61,0,0.08);border:1px solid rgba(255,61,0,0.2);border-radius:10px;display:inline-flex;align-items:center;gap:10px;padding:8px 20px;margin-bottom:2.5rem;">
+      <span style="color:var(--accent);font-weight:700;">🎁 DIGIMARK50</span>
+      <span style="color:var(--muted);font-size:0.88rem;">Valid for first 20 enrollments only</span>
+    </div>
+  </div>
+  <div class="pricing-grid fade-up">
+    <!-- Basic -->
+    <div class="price-card">
+      <div class="price-name">Basic</div>
+      <div class="price-amt">₹4,000 <small style="font-size:1rem;color:var(--muted);">Incl. GST</small></div>
+      <p class="price-orig">Experience our methodology</p>
+      <ul class="price-list">
+        <li>20 Days Digital Marketing Advanced PPT</li>
+        <li>5+ AI Tools Mastery</li>
+        <li>Freelancing Opportunity</li>
+        <li>1 Industry Certification</li>
+        <li>2 Portfolio Projects</li>
+        <li>Interview Preparation</li>
+        <li>Lifetime Course Access</li>
+        <li>1 Year Placement Help</li>
+        <li>Soft Skills & HR Policy Training</li>
+        <li>50+ Prompt Guidance</li>
+      </ul>
+      <button class="btn-enroll" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+    </div>
+    <!-- Intensive -->
+    <div class="price-card featured">
+      <div class="price-badge">MOST POPULAR</div>
+      <div class="price-name">45–60 Days Intensive</div>
+      <div class="price-amt">₹8,000 <small style="font-size:1rem;color:var(--muted);">Incl. GST</small></div>
+      <p class="price-orig">Original: ₹16,000 — 50% OFF Applied!</p>
+      <ul class="price-list">
+        <li>Complete Digital Marketing Program</li>
+        <li>Internship Opportunity + Experience Letter</li>
+        <li>5+ AI Tools</li>
+        <li>5 Industry Certificates</li>
+        <li>Work with Real Brands</li>
+        <li>Professional Resume Preparation</li>
+        <li>1 Year Placement Assistance</li>
+        <li>Top 5 Portfolio Creation</li>
+        <li>Mock Interview Preparation</li>
+        <li>100% Placement Support</li>
+        <li>100+ Prompt Guidance</li>
+        <li>Digital Agency Startup Guide</li>
+      </ul>
+      <button class="btn-enroll" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+    </div>
+    <!-- Advanced -->
+    <div class="price-card">
+      <div class="price-badge" style="background:var(--grad);">BEST VALUE</div>
+      <div class="price-name">3 Months Job-Ready Advanced</div>
+      <div class="price-amt">₹15,000 <small style="font-size:1rem;color:var(--muted);">Incl. GST</small></div>
+      <p class="price-orig">Original: ₹30,000 — 50% OFF Applied!</p>
+      <ul class="price-list">
+        <li>AI & Advanced Digital Marketing</li>
+        <li>10+ AI Tools Mastery</li>
+        <li>5+ Client Projects</li>
+        <li>10 Industry Certificates</li>
+        <li>6 Months Internship Experience Proof</li>
+        <li>Lifetime Placement Help</li>
+        <li>Stipend During Internship</li>
+        <li>Internal Spot Joining Opportunity</li>
+        <li>AI Mock Interview Preparation</li>
+        <li>Advanced MS-Excel for MIS</li>
+        <li>ChatBot Creation for Businesses</li>
+        <li>SaaS Platform Usage & AI Voice Making</li>
+        <li>200+ Prompt Guidance</li>
+        <li>Digital Agency Startup Guide</li>
+      </ul>
+      <button class="btn-enroll" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIGIMARK -->
+<section>
+  <div class="fade-up text-center">
+    <div class="section-tag">Why Choose Us</div>
+    <div class="section-title">Why Students Worldwide Choose DiGiMark</div>
+    <div class="divider center"></div>
+  </div>
+  <div class="why-grid fade-up">
+    <div class="why-card">
+      <div class="why-icon">👥</div>
+      <h4>Real Client Projects</h4>
+      <p>Work on actual marketing campaigns for global clients from day one.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤖</div>
+      <h4>AI Tools Included</h4>
+      <p>Master ChatGPT, Claude, Midjourney and cutting-edge AI marketing tools.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌐</div>
+      <h4>Multi-Language Support</h4>
+      <p>Learn in your preferred language — English, Hindi, Telugu, and more.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💯</div>
+      <h4>100% Job Support</h4>
+      <p>Guaranteed placement assistance with mock interviews and referrals.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📜</div>
+      <h4>Global Certifications</h4>
+      <p>Google, Meta, HubSpot and DiGiMark certified — recognized worldwide.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🏅</div>
+      <h4>Proven Track Record</h4>
+      <p>500+ successful placements with packages from 3–15 LPA and beyond.</p>
+    </div>
+  </div>
+
+  <!-- PLACEMENTS BAR -->
+  <div class="placement-bar fade-up" style="margin-top:3rem;">
+    <div class="place-stat">
+      <div class="place-num">Freshers</div>
+      <div class="place-label">3–8 LPA Packages</div>
+    </div>
+    <div style="width:1px;height:50px;background:var(--border);"></div>
+    <div class="place-stat">
+      <div class="place-num">Experienced</div>
+      <div class="place-label">6–15 LPA Packages</div>
+    </div>
+    <div style="width:1px;height:50px;background:var(--border);"></div>
+    <div class="place-stat">
+      <div class="place-num">500+</div>
+      <div class="place-label">Total Placements</div>
+    </div>
+    <div style="width:1px;height:50px;background:var(--border);"></div>
+    <div class="place-stat">
+      <div class="place-num">50+</div>
+      <div class="place-label">Hiring Partners</div>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFY CERTIFICATE -->
+<section id="verify">
+  <div class="fade-up text-center">
+    <div class="section-tag">Certificate Verification</div>
+    <div class="section-title">Verify DiGiMark Certificate</div>
+    <div class="divider center"></div>
+    <p class="section-sub">Employers: Instantly verify candidate credentials from DiGiMark's secure database. Each certificate contains a unique verification code.</p>
+  </div>
+  <div class="verify-box fade-up">
+    <h3 style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:0.3rem;">🔍 Verify Certificate</h3>
+    <p style="color:var(--muted);font-size:0.88rem;margin-bottom:1.5rem;">Format: DM-XXXX (e.g. DM-1042)</p>
+    <input type="text" class="verify-input" id="certInput" placeholder="Enter Certificate ID (e.g. DM-1042)" />
+    <button class="btn-verify" onclick="verifyCert()">🔍 Verify Now</button>
+    <div class="verify-result" id="verifyResult">
+      <h4>✅ Certificate Verified</h4>
+      <div class="verify-row"><span class="verify-label">📛 Name</span><span class="verify-val" id="vName">—</span></div>
+      <div class="verify-row"><span class="verify-label">🎓 Certification</span><span class="verify-val" id="vCourse">—</span></div>
+      <div class="verify-row"><span class="verify-label">🏫 Batch</span><span class="verify-val" id="vBatch">—</span></div>
+      <div class="verify-row"><span class="verify-label">⭐ Grade</span><span class="verify-val" id="vGrade">—</span></div>
+      <div class="verify-row"><span class="verify-label">⏱️ Duration</span><span class="verify-val" id="vDur">—</span></div>
+      <div class="verify-row"><span class="verify-label">💼 Internship</span><span class="verify-val" id="vIntern">—</span></div>
+      <p style="text-align:center;color:var(--accent2);font-size:0.78rem;margin-top:1rem;">⚡ DiGiMark Certified · Secure Database · 100% Authentic</p>
+    </div>
+    <div class="verify-result" id="verifyFail" style="background:rgba(255,61,0,0.07);border-color:rgba(255,61,0,0.2);">
+      <h4 style="color:var(--accent);">❌ Certificate Not Found</h4>
+      <p style="font-size:0.88rem;color:var(--muted);">This ID was not found in our database. Please check the ID and try again, or contact us at admin@digimark.in</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid fade-up">
+    <div class="contact-info">
+      <div class="section-tag">Contact Us</div>
+      <h3>Get In Touch &<br>Enroll Today</h3>
+      <div class="divider"></div>
+      <p>📞 Call <strong>+91 98765 43210</strong> — DiGiMark offers advanced digital marketing training with AI tools, live projects, and guaranteed placement support worldwide.</p>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-detail">
+          <h4>Main Contact</h4>
+          <p>+91 98765 43210</p>
+          <p style="font-size:0.8rem;color:var(--muted);">Available 9 AM – 8 PM</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail">
+          <h4>Email Address</h4>
+          <p>admin@digimark.in</p>
+          <p style="font-size:0.8rem;color:var(--muted);">Response within 2 hours</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div class="contact-detail">
+          <h4>Website</h4>
+          <p>www.digimark.in</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail">
+          <h4>Address</h4>
+          <p>Your Address Here, City, State, PIN</p>
+        </div>
+      </div>
+      <a href="https://wa.me/919876543210?text=Hello%20DiGiMark%2C%20I%20want%20to%20enroll%20in%20the%20Digital%20Marketing%20Course" class="wa-btn" target="_blank">
+        💬 Chat on WhatsApp for Quick Response
+      </a>
+    </div>
+    <div class="contact-form">
+      <h3 style="font-family:'Syne',sans-serif;font-weight:700;margin-bottom:1.5rem;">Quick Enrollment Form</h3>
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" class="form-control" placeholder="Your full name" />
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" class="form-control" placeholder="+91 00000 00000" />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" class="form-control" placeholder="you@email.com" />
+      </div>
+      <div class="form-group">
+        <label>Select Course *</label>
+        <select class="form-control">
+          <option>Basic – ₹4,000</option>
+          <option>45–60 Days Intensive – ₹8,000</option>
+          <option>3 Months Advanced – ₹15,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message (Optional)</label>
+        <textarea class="form-control" rows="3" placeholder="Any questions or preferences..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">🚀 Submit Enrollment Request</button>
+      <p style="text-align:center;color:var(--muted);font-size:0.78rem;margin-top:1rem;">We'll call you back within 30 minutes during business hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section style="background:var(--dark2);">
+  <div class="fade-up text-center">
+    <div class="section-tag">Other Services</div>
+    <div class="section-title">More From DiGiMark</div>
+    <div class="divider center"></div>
+  </div>
+  <div class="services-grid fade-up">
+    <div class="service-card">
+      <div class="service-icon">📈</div>
+      <h4>Digital Marketing Services</h4>
+      <p>Serving 20+ business clients globally</p>
+      <ul>
+        <li>SEO & SEM Services</li>
+        <li>Social Media Management</li>
+        <li>Google Ads Management</li>
+        <li>Complete Digital Strategy</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👥</div>
+      <h4>HR & Staffing Services</h4>
+      <p>IT, Non-IT, BFSI, Manufacturing</p>
+      <ul>
+        <li>Zero charges for candidates</li>
+        <li>PAN India & Global jobs</li>
+        <li>Bulk recruitment solutions</li>
+        <li>Temp & Permanent staffing</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎓</div>
+      <h4>Online & Distance Education</h4>
+      <p>Tie-up with 150+ UGC universities</p>
+      <ul>
+        <li>Online MBA, BBA, MCA, BCom</li>
+        <li>BTech, BSc, MSc, PhD</li>
+        <li>50+ degrees available</li>
+        <li>20% scholarship available</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚖️</div>
+      <h4>Legal & Business Services</h4>
+      <p>Business compliance solutions</p>
+      <ul>
+        <li>GST, MSME Registration</li>
+        <li>Company Incorporation</li>
+        <li>FSSAI, Loans, Insurance</li>
+        <li>IT Returns & Compliance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="font-size:1.8rem;">DiGi<span style="-webkit-text-fill-color:var(--accent)">Mark</span></div>
+      <p>World-class Digital Marketing Training Institute. Transforming careers with AI-powered digital marketing education on the Globe.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <a href="#home">Home</a>
+      <a href="#training">Training</a>
+      <a href="#verify">Verify Certificate</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact Info</h5>
+      <a href="#">📞 +91 98765 43210</a>
+      <a href="#">📧 admin@digimark.in</a>
+      <a href="#">📍 Your Address Here</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 DiGiMark – Digital Marketing Training & AI Skills. All rights reserved.</p>
+    <p style="color:var(--primary);">🌐 On The Globe</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919876543210?text=Hello%20DiGiMark%2C%20I%20want%20to%20enroll%20in%20the%20Digital%20Marketing%20Course" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script>
+// ─── COUNTDOWN TIMER ───
+function updateCountdown() {
+  const target = new Date();
+  target.setDate(target.getDate() + 12); // 12 days from now
+  target.setHours(0,0,0,0);
+  const now = new Date();
+  const diff = target - now;
+  if (diff <= 0) return;
+  const days = Math.floor(diff / 86400000);
+  const hrs  = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const secs = Math.floor((diff % 60000) / 1000);
+  const pad = n => String(n).padStart(2,'0');
+  document.getElementById('cd-days').textContent = pad(days);
+  document.getElementById('cd-hrs').textContent  = pad(hrs);
+  document.getElementById('cd-min').textContent  = pad(mins);
+  document.getElementById('cd-sec').textContent  = pad(secs);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ─── CERTIFICATE VERIFY ───
+const certData = {
+  'DM-1001': { name:'Ravi Kumar', course:'Advanced Digital Marketing', batch:'Batch Jan 2026', grade:'A+', duration:'3 Months', intern:'Completed' },
+  'DM-1002': { name:'Priya Sharma', course:'Intensive 45 Days', batch:'Batch Feb 2026', grade:'A',  duration:'45 Days', intern:'Completed' },
+  'DM-1003': { name:'Anil Reddy',  course:'Advanced Digital Marketing', batch:'Batch Mar 2026', grade:'A+', duration:'3 Months', intern:'In Progress' },
+  'DM-1042': { name:'Swathi Meena', course:'Intensive 60 Days', batch:'Batch Apr 2026', grade:'B+', duration:'60 Days', intern:'Completed' },
+};
+function verifyCert() {
+  const id = document.getElementById('certInput').value.trim().toUpperCase();
+  const res = document.getElementById('verifyResult');
+  const fail = document.getElementById('verifyFail');
+  res.classList.remove('show'); fail.classList.remove('show');
+  if (!id) return;
+  const d = certData[id];
+  if (d) {
+    document.getElementById('vName').textContent   = d.name;
+    document.getElementById('vCourse').textContent = d.course;
+    document.getElementById('vBatch').textContent  = d.batch;
+    document.getElementById('vGrade').textContent  = d.grade;
+    document.getElementById('vDur').textContent    = d.duration;
+    document.getElementById('vIntern').textContent = d.intern;
+    res.classList.add('show');
+  } else {
+    fail.classList.add('show');
+  }
+}
+document.getElementById('certInput').addEventListener('keydown', e => { if (e.key === 'Enter') verifyCert(); });
+
+// ─── FORM SUBMIT ───
+function submitForm() {
+  const btn = document.querySelector('.btn-submit');
+  btn.textContent = '✅ Request Submitted! We\'ll call you shortly.';
+  btn.style.background = '#00a87a';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '🚀 Submit Enrollment Request';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 4000);
+}
+
+// ─── MOBILE MENU ───
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ─── FADE IN ON SCROLL ───
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
